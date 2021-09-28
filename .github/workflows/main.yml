@@ -26,5 +26,5 @@ jobs:
           echo "Checking the config file"
           cat ~/.config/nobl9/config.toml
           echo "Running sloctl"\n
-          echo "Creating Duck Duck GO latency"\n
-          sloctl apply -f /__w/SLO/SLO/prod/slo.yml
+          echo "Creating Dragon GO latency"\n
+          sloctl apply -f /__w/slo/slo.yml
