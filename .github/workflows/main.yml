@@ -12,9 +12,9 @@ jobs:
       image: nadermor77/nobl9_github:latest
       env:
         GITHUB_RUNNER_HOME: /root
-      credentials:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+   #   credentials:
+   #     username: ${{ secrets.DOCKER_USERNAME }}
+   #     password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       ports:
         - 80 
     steps:
