@@ -27,4 +27,4 @@ jobs:
           cat ~/.config/nobl9/config.toml
           echo "Running sloctl"\n
           echo "Creating Dragon GO latency"\n
-          sloctl apply -f ~/nadermortazavi/slo/slo.yml
+          sloctl apply -f ~/nadermortazavi/nadermortazavi/slo/slo.yml
