@@ -1,1 +1,86 @@
+# Creating a Service
+- apiVersion: n9/v1alpha
+  kind: Service
+  metadata:
+    displayName: Dragon
+    name: dragon
+    project: default
+  spec:
+    description: ""
 
+
+# Creating SLO 
+- apiVersion: n9/v1alpha
+  kind: SLO
+  metadata:
+    displayName: dragon-latency
+    name: dragon-latency
+    project: default
+  spec:
+    alertPolicies: []
+    budgetingMethod: Occurrences
+    description: ""
+    indicator:
+      metricSource:
+        kind: Agent
+        name: dragon
+        project: default
+      rawMetric:
+        newRelic:
+          nrql: SELECT percentile(duration, 95) FROM SyntheticCheck WHERE monitorName = 'google'  TIMESERIES
+    objectives:
+    - displayName: ok
+      op: lt
+      target: 0.99
+      value: 2200
+    - displayName: slow
+      op: lt
+      target: 0.995
+      value: 3000
+    - displayName: bad
+      op: lt
+      target: 0.99999
+      value: 5000
+    service: dragon
+    timeWindows:
+    - count: 1
+      isRolling: true
+      period:
+        begin: "2021-09-28T15:19:56Z"
+        end: "2021-09-28T16:19:56Z"
+      unit: Hour
+- apiVersion: n9/v1alpha
+  kind: SLO
+  metadata:
+    displayName: dragon-availability
+    name: dragon-availability
+    project: default
+  spec:
+    alertPolicies: []
+    budgetingMethod: Occurrences
+    description: ""
+    indicator:
+      metricSource:
+        kind: Agent
+        name: dragon
+        project: default
+    objectives:
+    - countMetrics:
+        good:
+          newRelic:
+            nrql: SELECT count(*) FROM SyntheticCheck WHERE monitorName = 'google' WHERE result ='SUCCESS' TIMESERIES
+        incremental: false
+        total:
+          newRelic:
+            nrql: SELECT count(*) FROM SyntheticCheck WHERE monitorName = 'google'  TIMESERIES
+      displayName: Good
+      target: 0.999
+      value: 1
+    service: dragon
+    timeWindows:
+    - count: 1
+      isRolling: true
+      period:
+        begin: "2021-09-28T15:19:56Z"
+        end: "2021-09-28T16:19:56Z"
+      unit: Hour
