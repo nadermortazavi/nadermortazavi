@@ -9,7 +9,7 @@ jobs:
   my_job:
     runs-on: ubuntu-latest 
     container: 
-      image: nadermor77/nobl9_github:latest
+      image: nadermor77/nobl9_github:77
       env:
         GITHUB_RUNNER_HOME: /root
    #   credentials:
