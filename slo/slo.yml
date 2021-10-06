@@ -4,7 +4,7 @@
   metadata:
     displayName: Dragon
     name: dragon
-    project: default
+    project: github
   spec:
     description: ""
 
@@ -15,7 +15,7 @@
   metadata:
     displayName: dragon-latency
     name: dragon-latency
-    project: default
+    project: github
   spec:
     alertPolicies: []
     budgetingMethod: Occurrences
@@ -24,7 +24,7 @@
       metricSource:
         kind: Agent
         name: dragon
-        project: default
+        project: github
       rawMetric:
         newRelic:
           nrql: SELECT percentile(duration, 95) FROM SyntheticCheck WHERE monitorName = 'google'  TIMESERIES
@@ -54,7 +54,7 @@
   metadata:
     displayName: dragon-availability
     name: dragon-availability
-    project: default
+    project: github
   spec:
     alertPolicies: []
     budgetingMethod: Occurrences
@@ -63,7 +63,7 @@
       metricSource:
         kind: Agent
         name: dragon
-        project: default
+        project: github
     objectives:
     - countMetrics:
         good:
