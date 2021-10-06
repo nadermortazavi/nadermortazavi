@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 This repository used for creating SLOs in the Sloconf1 account automatically upon changing the yaml file.
-The workaction will automatically get triggered and pushes any changes in the yaml file to the account and creates or edits the SLOs and services.
+The workflow will automatically get triggered and pushes any changes in the yaml file to the account and creates or edits the SLOs and services.
 
 <!--
 **nadermortazavi/nadermortazavi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
