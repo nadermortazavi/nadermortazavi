@@ -4,7 +4,7 @@
   metadata:
     displayName: Dragon
     name: dragon
-    project: github
+    project: default
   spec:
     description: ""
 
@@ -15,7 +15,7 @@
   metadata:
     displayName: dragon-latency
     name: dragon-latency
-    project: github
+    project: default
   spec:
     alertPolicies: []
     budgetingMethod: Occurrences
@@ -23,11 +23,11 @@
     indicator:
       metricSource:
         kind: Agent
-        name: dragon
-        project: github
+        name: coopdeville
+        project: default
       rawMetric:
         newRelic:
-          nrql: SELECT percentile(duration, 95) FROM SyntheticCheck WHERE monitorName = 'google'  TIMESERIES
+          nrql: SELECT percentile(duration, 95) FROM SyntheticCheck WHERE monitorName = 'duckduckgo'  TIMESERIES
     objectives:
     - displayName: ok
       op: lt
@@ -54,7 +54,7 @@
   metadata:
     displayName: dragon-availability
     name: dragon-availability
-    project: github
+    project: default
   spec:
     alertPolicies: []
     budgetingMethod: Occurrences
@@ -62,17 +62,17 @@
     indicator:
       metricSource:
         kind: Agent
-        name: dragon
-        project: github
+        name: coopdeville
+        project: default
     objectives:
     - countMetrics:
         good:
           newRelic:
-            nrql: SELECT count(*) FROM SyntheticCheck WHERE monitorName = 'google' WHERE result ='SUCCESS' TIMESERIES
+            nrql: SELECT count(*) FROM SyntheticCheck WHERE monitorName = 'duckduckgo' WHERE result ='SUCCESS' TIMESERIES
         incremental: false
         total:
           newRelic:
-            nrql: SELECT count(*) FROM SyntheticCheck WHERE monitorName = 'google'  TIMESERIES
+            nrql: SELECT count(*) FROM SyntheticCheck WHERE monitorName = 'duckduckgo'  TIMESERIES
       displayName: Good
       target: 0.999
       value: 1
