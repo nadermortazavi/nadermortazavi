@@ -22,7 +22,7 @@
     description: ""
     indicator:
       metricSource:
-        kind: Agent
+        kind: Direct
         name: coopdeville
         project: default
       rawMetric:
@@ -61,7 +61,7 @@
     description: ""
     indicator:
       metricSource:
-        kind: Agent
+        kind: Direct
         name: coopdeville
         project: default
     objectives:
