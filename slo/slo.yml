@@ -2,8 +2,8 @@
 - apiVersion: n9/v1alpha
   kind: Service
   metadata:
-    displayName: Dragon
-    name: dragon
+    displayName: DemoSloAsCode
+    name: DemoSloAsCode
     project: default
   spec:
     description: ""
@@ -13,8 +13,8 @@
 - apiVersion: n9/v1alpha
   kind: SLO
   metadata:
-    displayName: dragon-latency
-    name: dragon-latency
+    displayName: demo-latency
+    name: demo-latency
     project: default
   spec:
     alertPolicies: []
@@ -41,7 +41,7 @@
       op: lt
       target: 0.9999
       value: 5000
-    service: dragon
+    service: DemoSloAsCode
     timeWindows:
     - count: 1
       isRolling: true
@@ -52,8 +52,8 @@
 - apiVersion: n9/v1alpha
   kind: SLO
   metadata:
-    displayName: dragon-availability
-    name: dragon-availability
+    displayName: demo-availability
+    name: demo-availability
     project: default
   spec:
     alertPolicies: []
@@ -76,7 +76,7 @@
       displayName: Good
       target: 0.999
       value: 1
-    service: dragon
+    service: DemoSloAsCode
     timeWindows:
     - count: 1
       isRolling: true
