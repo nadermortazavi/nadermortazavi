@@ -3,7 +3,7 @@
   kind: Service
   metadata:
     displayName: DemoSloAsCode
-    name: DemoSloAsCode
+    name: demoSloAsCode
     project: default
   spec:
     description: ""
@@ -41,7 +41,7 @@
       op: lt
       target: 0.9999
       value: 5000
-    service: DemoSloAsCode
+    service: demoSloAsCode
     timeWindows:
     - count: 1
       isRolling: true
@@ -76,7 +76,7 @@
       displayName: Good
       target: 0.999
       value: 1
-    service: DemoSloAsCode
+    service: demoSloAsCode
     timeWindows:
     - count: 1
       isRolling: true
