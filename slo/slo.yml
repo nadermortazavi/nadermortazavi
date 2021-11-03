@@ -74,7 +74,7 @@
           newRelic:
             nrql: SELECT count(*) FROM SyntheticCheck WHERE monitorName = 'duckduckgo'  TIMESERIES
       displayName: Good
-      target: 0.999
+      target: 0.99
       value: 1
     service: demosloascode
     timeWindows:
