@@ -39,7 +39,7 @@
       value: 3000
     - displayName: poor
       op: lt
-      target: 0.997
+      target: 0.999
       value: 5000
     service: demosloascode
     timeWindows:
