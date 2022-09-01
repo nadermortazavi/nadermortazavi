@@ -31,7 +31,7 @@
     objectives:
     - displayName: ok
       op: lt
-      target: 0.95
+      target: 0.995
       value: 2200
     - displayName: slow
       op: lt
