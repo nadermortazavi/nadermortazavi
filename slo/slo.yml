@@ -35,7 +35,7 @@
       value: 2200
     - displayName: slow
       op: lt
-      target: 0.999
+      target: 0.99
       value: 3000
     - displayName: poor
       op: lt
