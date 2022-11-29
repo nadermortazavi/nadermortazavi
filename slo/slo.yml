@@ -33,7 +33,7 @@
       op: lt
       target: 0.95
       value: 2200
-    - displayName: slow
+    - displayName: notfast
       op: lt
       target: 0.99
       value: 3000
